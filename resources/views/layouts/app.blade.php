@@ -70,6 +70,7 @@
 
             @endguest
 
+            <hr>
         </nav>
 
         @yield('content')

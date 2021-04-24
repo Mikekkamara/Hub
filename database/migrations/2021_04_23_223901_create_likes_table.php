@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateFeedsTable extends Migration
+class CreateLikesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,16 @@ class CreateFeedsTable extends Migration
      */
     public function up()
     {
-        Schema::create('feeds', function (Blueprint $table) {
+        Schema::create('likes', function (Blueprint $table) {
+            $table->increments('id');
+            $table->unsignedBigInteger('post_id');
             $table->integer('likes');
-            
+
             $table->timestamps();
+            $table->foreign('post_id')
+                    ->references('user_id')
+                    ->on('posts')
+                    ->onDelete('cascade');
         });
     }
 
@@ -27,6 +33,6 @@ class CreateFeedsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('feeds');
+        Schema::dropIfExists('likes');
     }
 }

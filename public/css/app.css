@@ -55,7 +55,9 @@ div + div{
     margin-top: 10px;
 }
 .likee{
-    display: none;
+    display: block;
+    position: relative;
+    bottom: 0;
 }
 #sweet{
     width: 50%;
@@ -68,6 +70,15 @@ div + div{
 .postId{
     display:block;
     text-align: left;
+    font-size: 0.8em;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.home_btns{
+    position: relative;
+    top: 100px;
+    
 }
 
 /* #############  MAIN. HOME.BLADE ############### */
@@ -237,4 +248,150 @@ input:focus{
 /* register */
 
 
+/* #############  CREATE PAGE ############### */
+.new_post{
+    /* border: 1px solid red; */
+    position: relative;
+    top: 100px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    max-width: 50%;
+    min-height: 70vh;
+    background: rgba(9, 8, 8, 0.085);
+    border-radius: 8px;
+    box-shadow: 0 0 10px black;
+}
+.label{
+    padding: 10px;
+    font-size: 1.4em;
+    font-weight: 600;
+    /* border: 1px solid blue; */
 
+}
+.body-text{
+    width: 96%;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 1.6em;
+    margin-top: -15px;
+    transition: border 2s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+.inp-ttl{
+    width: 70%;
+    position: relative;
+    top: 10px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    /* border: 1px dotted; */
+    margin-top: 0;
+    border-radius: 5px;
+    padding: 10px;
+}
+.sub_btn{
+    width: 100%;
+    padding: 10px;
+    background: rgb(0, 128, 128);
+    text-transform: uppercase;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+    margin-top: 60px;
+    transition: background 1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+
+}
+
+.ttl_label, .text_label{
+    display: block;
+    margin: 5px;
+    /* border: 1px dotted red; */
+    padding: 5px;
+    font-size: 1.2em;
+    margin-left: 0;
+    padding-left: 0;
+    font-weight: 700;
+}
+.title{
+    margin-top: -20px;
+    margin-bottom: 5px;
+    transition: border 2s cubic-bezier(0.215, 0.610, 0.355, 1);
+
+}
+.title:hover{
+    border: 3px solid black;
+}
+.title, textarea{
+    background: transparent;
+}
+.body-text:hover{
+    border: 3px solid black;
+}
+.sub_btn:hover{
+    background: rgb(6, 66, 66) ;
+}
+
+
+
+
+/* #############  CREATE PAGE ############### */
+
+/* #############  SHOW PAGE ############### */
+.your_posts{
+    border: 1px solid black;
+     min-width: 40%;
+    max-width: 60%;
+    position: relative;
+    top: 30px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    min-height: 5vh;
+    margin-top: 10px;
+    box-shadow: 3px 5px 4px rgba(9, 8, 8, 0.693);
+    transition: box-shadow 3s cubic-bezier(0.19, 1, 0.22, 1);
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1.2em;
+
+}
+.post_container{
+    /* border: 1px solid blue; */
+    position: relative;
+    top: 100px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    max-width: 50vw;
+    height: 100vh;
+}
+.delete_post{
+    display: block;
+    padding: 5px;
+    background: red;
+    width: fit-content;
+    border-radius: 10px;
+}
+.edit_post{
+    display: block;
+    padding: 5px;
+    background: green;
+    border-radius: 10px;
+    margin: 5px;
+    width: fit-content;
+    margin-top: 20px;
+}
+.post_ttl{
+    display: block;
+    /* border: 1px solid green; */
+}
+.your_posts:hover{
+    box-shadow: 7px 13px 8px rgba(9, 8, 8, 0.693);
+}
+/* #############  SHOW PAGE ############### */

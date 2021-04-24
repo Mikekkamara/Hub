@@ -24,9 +24,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $post = Post::all();
-        return view('home')->with([
-            'posts'=>$post
-        ]);
+       
     }
 }
