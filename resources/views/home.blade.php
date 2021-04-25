@@ -3,8 +3,8 @@
 @section('content')
 
             <div class="home_btns">
-                <a href="{{ url('home/create') }}">New Post</a>
-                <a href="/home/ {{  Auth::user()->id }} ">Your Posts</a>
+                <a class="post_btn" href="{{ url('home/create') }}">New Post</a>
+                <a class="show_posts"href="/home/ {{  Auth::user()->id }} ">Your Posts</a>
             </div>
 
             <div class="feeds">
@@ -15,10 +15,12 @@
                     <div
                     class="main">
                         <p id="sweet">
-                            <span class="postId">By {{ $post->User_name }}</span>
+                            <span class="postId">By <a href="#">{{ $post->User_name }}</a></span>
+                            <span class="home_ttl">{{ $post->title }}</span> <br>
                            <span class="quote">"</span> {{ $post->body }} <span class="quote">"</span>
                         </p>
-                        <button type="submit" class="likee">Hey</button>
+
+                    
                     </div>
                 @endforeach
                     <form action=""></form>

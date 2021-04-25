@@ -24,6 +24,7 @@ body{
 .nav-bar-nav{
     position: fixed;
     width: 100%;
+    background: rgb(202, 198, 198);
 }
 .navbar-brand{
     font-size: 4em;
@@ -34,6 +35,14 @@ body{
     padding: 5px;
     font-size: 1.5em;
     margin-top: 20px;
+    transition: all 3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border-radius: 5px;
+}
+.logt:hover{
+    background: rgb(189, 184, 184);
+}
+.name-bar:hover{
+    background: rgb(189, 184, 184);
 }
 
 /* #############  NAV BAR ############### */
@@ -58,6 +67,11 @@ div + div{
     display: block;
     position: relative;
     bottom: 0;
+    border: 1px solid black;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+
 }
 #sweet{
     width: 50%;
@@ -74,12 +88,36 @@ div + div{
     font-style: italic;
     margin-bottom: 20px;
 }
-
+.home_ttl{
+    font-weight: 900;
+    border-bottom: 2px dotted;
+}
 .home_btns{
     position: relative;
     top: 100px;
-    
+
 }
+.post_btn, .show_posts{
+    display: block;
+    position: fixed;
+    text-align: center;
+    width: 6%;
+    margin: 10px;
+    padding: 5px;
+    font-size: 1.2em;
+    border: 2px solid teal;
+    border-radius: 3px;
+    font-weight: 600;
+    transition: all 3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.show_posts{
+    top: 150px;
+}
+.post_btn:hover{
+    background: rgb(170, 164, 164);
+
+}
+
 
 /* #############  MAIN. HOME.BLADE ############### */
 
@@ -169,6 +207,10 @@ div + div{
     margin-top: 30px;
     font-size: 1.3em;
     font-variant: small-caps;
+    transition: all 3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.nav-item:hover{
+    background: rgb(191, 185, 185);
 }
 .nav-link{
     padding: 5px;
@@ -269,6 +311,24 @@ input:focus{
     font-weight: 600;
     /* border: 1px solid blue; */
 
+}
+.back_container{
+    /* border: 1px solid; */
+}
+.back_btn{
+    position: fixed;
+    top: 100px;
+    padding: 5px;
+    font-size: 1.2em;
+    margin: 5px;
+    border: 1px solid teal;
+    transition: all 3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    font-weight: 700;
+    border-radius: 5px;
+
+}
+.back_btn:hover{
+    background: rgb(201, 196, 196);
 }
 .body-text{
     width: 96%;
@@ -395,3 +455,4 @@ input:focus{
     box-shadow: 7px 13px 8px rgba(9, 8, 8, 0.693);
 }
 /* #############  SHOW PAGE ############### */
+

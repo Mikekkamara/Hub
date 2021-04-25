@@ -81,7 +81,11 @@ class postsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $edit = Post::find($id);
+        // ddd($edit);
+        return view('layouts.edit')->with([
+            'post'=>$edit
+        ]);
     }
 
     /**
@@ -93,7 +97,12 @@ class postsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $post = Post::where('id', $id)->update([
+        'title'=>$request->input('title'),
+        'body'=>$request->input('body')
+        ]);
+
+        return redirect('/home');
     }
 
     /**
@@ -104,6 +113,13 @@ class postsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        // dd('works');
+        $del = Post::find($id)->first();
+        $del->delete();
+
+        return redirect('/home');
+    }
+    public function profile(){
+        dd('works');
     }
 }

@@ -54,7 +54,7 @@
             @endif
                 @else
 
-                    <a id="navbarDropdown" class="name-bar" href="#">
+                    <a id="navbarDropdown" class="name-bar" href="/profile">
                             {{ Auth::user()->name }}
                     </a>
 
@@ -72,8 +72,14 @@
 
             <hr>
         </nav>
+        <main>
 
-        @yield('content')
+            @yield('content')
+        </main>
+
+        {{-- <footer>
+            hey
+        </footer> --}}
 
 </body>
 </html>

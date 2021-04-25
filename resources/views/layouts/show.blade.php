@@ -8,8 +8,16 @@
             @foreach ($posts as $post )
             <div class="your_posts">
                 {{ $post->body }}
-                <span class="edit_post" ><a href="#">Edit &rarr;</a></span>
-                <span class="delete_post" ><a href="#">Delete &rarr;</a></span>
+                <span class="edit_post" ><a href="{{ $post->id }}/edit">Edit &rarr;</a></span>
+                
+            {{-- DELETE BUTTON --}}
+            <form action="{{ $post->id }}" method="POST">
+                @csrf
+                @method('delete')
+                {{-- <span class="delete_post" ></span> --}}
+                <button type="submit">Delete &rarr;</button>
+            </form>
+            {{-- DELETE BUTTON --}}
             </div>
             @endforeach
 
