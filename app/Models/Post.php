@@ -10,11 +10,7 @@ class Post extends Model
     use HasFactory;
     protected $primarykey = 'id';
 
-    protected $fillable = ['user_id','User_name','title','body'];
-
-    public function like(){
-        return $this->hasMany(likes::class);
-    }
+    protected $fillable = ['user_id','User_name','title','body','likes'];
 
     public function user(){
         return $this->belongsTo(User::class);

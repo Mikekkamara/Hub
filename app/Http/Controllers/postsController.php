@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Post;
+use App\Models\likes;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Date;
@@ -15,11 +16,14 @@ class postsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+
     public function index()
     {
         //Look up the  (user_id) on the users table and display the name
         // $user_name = User::find($user_id)->first()->name;
         // ddd($user_name);
+
         $post = Post::all();
         $hey = Post::all()->first();
         return view('home')->with([
@@ -53,6 +57,12 @@ class postsController extends Controller
             'title'=>$request->input('title'),
             'body'=>$request->input('body')
         ]);
+        // $res = Post::all()->id;
+        // dd($res);
+        // $like = likes::create([
+        //     'post_id'=>Post::all()->id,
+        //     'likes'=>0
+        // ]);
 
         return redirect('/home');
     }
@@ -102,6 +112,7 @@ class postsController extends Controller
         'body'=>$request->input('body')
         ]);
 
+
         return redirect('/home');
     }
 
@@ -119,7 +130,15 @@ class postsController extends Controller
 
         return redirect('/home');
     }
-    public function profile(){
-        dd('works');
+
+    public function like($id){
+        $res = Post::find($id)->likes;
+        $add = Post::where('id', $id)->update([
+            'likes'=>$res + 1
+        ]);
+        return redirect('/home');
+
     }
+
+
 }

@@ -15,15 +15,19 @@
                     <div
                     class="main">
                         <p id="sweet">
-                            <span class="postId">By <a href="#">{{ $post->User_name }}</a></span>
+                            <span class="postId">By <a href="#">{{ $post->User_name }}</a> . Liked by {{ $post->likes }}</span>
                             <span class="home_ttl">{{ $post->title }}</span> <br>
                            <span class="quote">"</span> {{ $post->body }} <span class="quote">"</span>
                         </p>
+                        <form action="home/{{ $post->id }}/like" method="POST">
+                        @csrf
+                        @method('get')
+                           <button class="like_btn" type="submit" onsubmit="stop()">L</button>
+                        </form>
 
-                    
                     </div>
                 @endforeach
-                    <form action=""></form>
+                    {{-- <form action=""></form> --}}
             </div>
 
 

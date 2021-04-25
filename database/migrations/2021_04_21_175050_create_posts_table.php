@@ -19,6 +19,7 @@ class CreatePostsTable extends Migration
             $table->mediumText('User_name');
             $table->mediumText('title');
             $table->longText('body');
+            $table->integer('likes')->default(0);
             $table->timestamps();
             $table->foreign('user_id')
                     ->references('id')

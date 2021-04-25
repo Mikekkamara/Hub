@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\postsController;
+use App\Http\Controllers\HomeController;
+use App\Models\likes;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
@@ -24,4 +26,4 @@ Route::get('/', function () {
 
 Auth::routes();
 
-// Route::get('/profile', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('home/{id}/like',[postsController::class, 'like'])->name('likes');

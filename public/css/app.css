@@ -63,16 +63,7 @@ body{
 div + div{
     margin-top: 10px;
 }
-.likee{
-    display: block;
-    position: relative;
-    bottom: 0;
-    border: 1px solid black;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
 
-}
 #sweet{
     width: 50%;
     margin: auto;
@@ -117,7 +108,16 @@ div + div{
     background: rgb(170, 164, 164);
 
 }
+.like_btn{
+    display: inline;
+    position: relative;
+    width: 20px;
+    height: 20px;
+    background: rgb(121, 184, 121);
+    border-radius: 50%;
+    top: 10px;
 
+}
 
 /* #############  MAIN. HOME.BLADE ############### */
 
